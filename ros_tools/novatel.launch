@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="novatel"
+        pkg="nodelet" type="nodelet"
+        args="standalone novatel_gps_driver/novatel_gps_nodelet">
+    <rosparam>
+      connection_type: serial
+      device: /dev/ttyUSB0
+      frame_id: /gps
+    </rosparam>
+  </node>
+</launch>
