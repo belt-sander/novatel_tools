@@ -18,7 +18,7 @@ exec 3<$serialport
 		sleep 15.0s
 
 		echo ""
-		echo "doscmd del * " > $serialport
+		echo "doscmd del *" > $serialport
 		echo "deleted all internally stored data!!"
 		sleep 5.0s
 
