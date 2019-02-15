@@ -5,9 +5,11 @@ in a unix environment. If you are using a USB->Serial cable that does not exist 
 e.g. `/dev/ttyUSB1` etc... you will need to pass the argument to the bash script:
 
 for a device located at `/dev/ttyUSB0`
+
 `sudo ./internal_log_start_novatel.sh 0` 
 
 for a device located at `/dev/ttyUSB1`
+
 `sudo ./internal_log_start_novatel.sh 1`
 
 
