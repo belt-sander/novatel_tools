@@ -17,6 +17,10 @@ exec 3<$serialport
 		echo "unlogall true" > $serialport
 		echo "removed old logging parameters, check log for startup status"
 		sleep 1.0s
+		echo ""
+		echo "log loglist" > $serialport
+		echo "checking for currently logged variables. should only be one variable."
+		sleep 1.0s
 	 kill $PID	
 exec 3<&-
 cat /tmp/ttyDump.dat #show dumped serial output
