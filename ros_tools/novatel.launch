@@ -7,14 +7,17 @@
       connection_type: tcp
       device: 192.168.100.169:2000
       frame_id: /gps
-      imu_rate: 200
+      imu_frame_id: /imu
+      polling_period: 0.05
+      imu_rate: 100
       publish_diagnostics: true
       publish_imu: true
       publish_novatel_positions: true
       publish_novatel_utm_positions: true
       publish_novatel_velocity: true
       publish_time_messages: true
-      
+      use_binary_messages: true
     </rosparam>
   </node>
 </launch>
+
