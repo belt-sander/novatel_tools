@@ -12,10 +12,11 @@ for a device located at `/dev/ttyUSB1`
 
 `sudo ./internal_log_start_novatel.sh 1`
 
-
 This also assumes that you have configured the Novatel receiver using the `SERIALCONFIG`
 command to set up the basic serial configuration.
 
 Example:
 
 `SERIALCONFIG <yourSerialPort> 115200 N 8 1 N ON`
+
+Note: the `./internal_log_delete_novatel.sh` script is currently broken. Unsure of cause. 
