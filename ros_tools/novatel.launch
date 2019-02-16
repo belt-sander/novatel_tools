@@ -4,9 +4,17 @@
         pkg="nodelet" type="nodelet"
         args="standalone novatel_gps_driver/novatel_gps_nodelet">
     <rosparam>
-      connection_type: serial
-      device: /dev/ttyUSB0
+      connection_type: tcp
+      device: 192.168.100.169:2000
       frame_id: /gps
+      imu_rate: 200
+      publish_diagnostics: true
+      publish_imu: true
+      publish_novatel_positions: true
+      publish_novatel_utm_positions: true
+      publish_novatel_velocity: true
+      publish_time_messages: true
+      
     </rosparam>
   </node>
 </launch>
