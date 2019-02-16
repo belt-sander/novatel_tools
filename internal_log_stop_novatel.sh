@@ -28,6 +28,8 @@ exec 3<$serialport
 exec 3<&-
 cat /tmp/ttyDump.dat #show dumped serial output
 
+rm /tmp/ttyDump.dat
+
 echo ""
 echo "logging stopped, yo!"
 echo ""
