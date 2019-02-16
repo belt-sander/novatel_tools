@@ -18,7 +18,7 @@ Usually, in linux, the USB-Micro port on the PP6 reciever comes in to the laptop
 
 *when the device is first started up, you must send:*
 
-`~$ sudo ./novatel_start 0` and make sure that you get an <OK> response when the 
+`~$ sudo ./novatel_start.sh 0` and make sure that you get an <OK> response when the 
 script is finished.
 
 *to log the specified post processed values needed for PPK internally on the PP6*
