@@ -11,7 +11,7 @@
       polling_period: 0.05
       imu_rate: 100
       publish_diagnostics: true
-      publish_imu_messages: true
+      publish_imu_messages: false
       publish_novatel_utm_positions: true
       publish_novatel_velocity: true
       publish_time_messages: true

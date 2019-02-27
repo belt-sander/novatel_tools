@@ -9,7 +9,7 @@
       frame_id: /gps
       imu_frame_id: /imu
       polling_period: 0.05
-      imu_rate: 100
+      imu_rate: 50
       publish_diagnostics: true
       publish_imu_messages: true
       publish_novatel_utm_positions: true
