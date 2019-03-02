@@ -13,10 +13,6 @@ exec 3<$serialport
 	rm -f ttyDump.dat                    
 	cat <&3 > /tmp/ttyDump.dat & #start serial log
 	PID=$!
-		echo "unlogall true" > $serialport
-		echo "unlogall true"
-		sleep 0.5s
-
 		echo "LOG FILE RXSTATUSB ONCE" > $serialport
 		echo "log rxstatusb once"
 		sleep 0.5s
@@ -100,5 +96,5 @@ exec 3<&-
 cat /tmp/ttyDump.dat #show dumped serial output
 
 echo ""
-echo "if the green LED is flashing, your system is logging internally as we speak!"
+echo "if the green LED is flashing, your system is currently logging internally!"
 echo ""
