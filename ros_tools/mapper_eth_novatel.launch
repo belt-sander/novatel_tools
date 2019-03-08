@@ -5,7 +5,7 @@
         args="standalone novatel_gps_driver/novatel_gps_nodelet">
     <rosparam>
       connection_type: tcp
-      device: 192.168.100.169:3001
+      device: 192.168.100.169:2000
       frame_id: /gps
       imu_frame_id: /imu
       polling_period: 0.05
