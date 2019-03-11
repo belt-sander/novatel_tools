@@ -42,7 +42,7 @@ exec 3<$serialport
 		echo "publishing rtcm1019"
 		sleep 1.0s
 		echo ""
-		echo "autosurvey enable 10" > $serialport
+		echo "autosurvey enable 60" > $serialport
 		echo "autosurvey running for a total of 10 minutes"
 		sleep 1.0s
 		echo ""
