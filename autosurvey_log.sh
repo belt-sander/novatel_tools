@@ -23,22 +23,27 @@ exec 3<$serialport
 		sleep 1.0s
 		echo ""
 		echo "LOG COM1 RTCM1004 ONTIME 1" > $serialport
+		echo "LOG FILE RTCM1004 ONTIME 1" > $serialport
 		echo "publishing rtcm1004"
 		sleep 1.0s
 		echo ""
 		echo "LOG COM1 RTCM1012 ONTIME 1" > $serialport
+		echo "LOG FILE RTCM1012 ONTIME 1" > $serialport
 		echo "publishing rtcm1012"
 		sleep 1.0s
 		echo ""
 		echo "LOG COM1 RTCM1006 ONTIME 10" > $serialport
+		echo "LOG FILE RTCM1006 ONTIME 10" > $serialport		
 		echo "publishing rtcm1006"
 		sleep 1.0s
 		echo ""
 		echo "LOG COM1 RTCM1033 ONTIME 10" > $serialport
+		echo "LOG FILE RTCM1033 ONTIME 10" > $serialport
 		echo "publishing rtcm1033"
 		sleep 1.0s
 		echo ""
 		echo "LOG COM1 RTCM1019 ONTIME 120" > $serialport
+		echo "LOG FILE RTCM1019 ONTIME 120" > $serialport
 		echo "publishing rtcm1019"
 		sleep 1.0s
 		echo ""
@@ -48,6 +53,8 @@ exec 3<$serialport
 		echo ""
 		echo "saveconfig" > $serialport
 		echo "good ole saveconfig"
+		echo "fileconfig open" > $serialport
+		echo "file logging started."
 		sleep 1.0s
 	 kill $PID	
 exec 3<&-

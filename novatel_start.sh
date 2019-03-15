@@ -7,7 +7,7 @@ fi
 
 serialport=/dev/ttyUSB$1
 
-stty -F $serialport 115200 raw -echo   #setup serial port to 115200 on ttyUSB0 (Default)
+stty -F $serialport 57600 raw -echo   #setup serial port to 115200 on ttyUSB0 (Default)
 exec 3<$serialport 
 	cd /tmp/
 	rm -f ttyDump.dat                    
