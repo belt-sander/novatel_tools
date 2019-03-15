@@ -43,7 +43,7 @@ exec 3<$serialport
 		sleep 1.0s
 		echo ""
 		echo "autosurvey enable 60" > $serialport
-		echo "autosurvey running for a total of 10 minutes"
+		echo "autosurvey running for a total of 60 minutes"
 		sleep 1.0s
 		echo ""
 		echo "saveconfig" > $serialport
