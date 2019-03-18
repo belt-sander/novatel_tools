@@ -42,8 +42,8 @@ exec 3<$serialport
 		echo "publishing rtcm1019"
 		sleep 1.0s
 		echo ""
-		echo "autosurvey enable 60" > $serialport
-		echo "autosurvey running for a total of 60 minutes"
+		echo "autosurvey enable 60 0.05 3" > $serialport
+		echo "autosurvey running for a total of 60 minutes, 0.05m accuracy, 3 meter tolerance"
 		sleep 1.0s
 		echo ""
 		echo "saveconfig" > $serialport
@@ -54,5 +54,5 @@ exec 3<&-
 cat /tmp/ttyDump.dat #show dumped serial output
 
 echo ""
-echo "rtk base station will be enabled in 10 minutes!"
+echo "rtk base station will be enabled in 60 minutes!"
 echo ""
