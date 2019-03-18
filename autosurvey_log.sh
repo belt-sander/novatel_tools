@@ -14,46 +14,50 @@ exec 3<$serialport
 	cat <&3 > /tmp/ttyDump.dat & #start serial log
 	PID=$!
 		echo ""
-		echo "serialconfig com1 57600 n 8 1 n on" > $serialport
-		echo "setup serial port com1 at 57600 baud with an 8N1 message"
+		echo "LOG FILE VERSIONB ONCE" > $serialport
+		echo "logging versionb once"
 		sleep 1.0s
 		echo ""
-		echo "interfacemode com1 none rtcmv3 off" > $serialport
-		echo "setup serial port com1 to publish rtcmv3 corrections"
+		echo "LOG FILE RXSTATUSB ONCE" > $serialport
+		echo "logging rxstatusb once"
 		sleep 1.0s
 		echo ""
-		echo "LOG COM1 RTCM1004 ONTIME 1" > $serialport
-		echo "LOG FILE RTCM1004 ONTIME 1" > $serialport
-		echo "publishing rtcm1004"
+		echo "LOG FILE RXCONFIGB ONCE" > $serialport		
+		echo "logging rxconfigb once"
 		sleep 1.0s
 		echo ""
-		echo "LOG COM1 RTCM1012 ONTIME 1" > $serialport
-		echo "LOG FILE RTCM1012 ONTIME 1" > $serialport
-		echo "publishing rtcm1012"
+		echo "LOG FILE RAWEPHEMB ONCHANGED" > $serialport
+		echo "logging rawephemb onchanged"
 		sleep 1.0s
 		echo ""
-		echo "LOG COM1 RTCM1006 ONTIME 10" > $serialport
-		echo "LOG FILE RTCM1006 ONTIME 10" > $serialport		
-		echo "publishing rtcm1006"
+		echo "LOG FILE GLOEPHEMERISB ONCHANGED" > $serialport
+		echo "logging gloephemerisb onchanged"
 		sleep 1.0s
+        echo ""
+		echo "LOG FILE ALMANACB ONNEW" > $serialport
+		echo "logging almanacb onchanged"		
+        sleep 1.0s
+        echo ""
+		echo "LOG FILE GLOALMANACB ONNEW" > $serialport
+		echo "logging gloalmanacb onchanged"		
+        sleep 1.0s
 		echo ""
-		echo "LOG COM1 RTCM1033 ONTIME 10" > $serialport
-		echo "LOG FILE RTCM1033 ONTIME 10" > $serialport
-		echo "publishing rtcm1033"
-		sleep 1.0s
+		echo "LOG FILE GLOCLOCKB ONCHANGED" > $serialport
+		echo "logging gloclockb onchanged"		
+        sleep 1.0s
 		echo ""
-		echo "LOG COM1 RTCM1019 ONTIME 120" > $serialport
-		echo "LOG FILE RTCM1019 ONTIME 120" > $serialport
-		echo "publishing rtcm1019"
-		sleep 1.0s
+		echo "LOG FILE RANGECMP2B ONTIME 1" > $serialport
+		echo "logging rangecmp2b ontime 1"		
+        sleep 1.0s
 		echo ""
-		echo "autosurvey enable 10" > $serialport
-		echo "autosurvey running for a total of 10 minutes"
-		sleep 1.0s
-		echo ""
+		echo "LOG FILE BESTPOSB ONTIME 10" > $serialport
+		echo "logging bestposb ontime 10"		
+        sleep 1.0s			
+        echo ""
 		echo "saveconfig" > $serialport
 		echo "good ole saveconfig"
-		echo "fileconfig open" > $serialport
+        sleep 1.0s		
+        echo "fileconfig open" > $serialport
 		echo "file logging started."
 		sleep 1.0s
 	 kill $PID	
@@ -61,5 +65,5 @@ exec 3<&-
 cat /tmp/ttyDump.dat #show dumped serial output
 
 echo ""
-echo "rtk base station will be enabled in 10 minutes!"
+echo "rtk base data is logging for post processing!"
 echo ""
