@@ -41,23 +41,22 @@ disk icon is *flashing green* at 1hz.
 `~$ sudo ./internal_log_stop_novatel_pp7.sh 0` and make sure that the green LED next to the 
 disk icon is *not flashing green*.
 
-*to start logging base station survey data on PP6 or PP7*
-`~$ sudo ./autosurvey_log.sh 0` and make sure that the green LED next to the disc icon is *flashing green* at 1hz.
+*to start logging base station survey data on PP7*
+`~$ sudo ./base_station_log.sh 0` and make sure that the green LED next to the disc icon is *flashing green* at 1hz.
 
 this data can be used later to post process the antenna location for surveying the basestation accurately. 
 
-*to start the `autosurvey` function*
-`~$ sudo ./autosurvey_com1.sh 0`
+*to start the `autosurvey` function. only use for relative accuracy tests*
+`~$ sudo ./autosurvey.sh 0`
 
-this can be used for pretty good relative accuracy from an RTK base station, but I wouldn't suggest using it for absolute accuracy. 
+*to start publishing corrections from the master receiver, on com 1, at 57600 baud*
+`~$ sudo ./base_station_enable.sh 0`
 
 Note:
 
-This also assumes that you have configured the Novatel receiver using the `SERIALCONFIG`
+This also assumes that you have configured the Novatel receiver (rover) using the `SERIALCONFIG`
 command to set up the basic serial configuration.
 
 Example:
 
 `SERIALCONFIG <yourSerialPort> 115200 N 8 1 N ON`
-
-Note: the `./internal_log_delete_novatel.sh` script is currently broken. Unsure of cause. 
